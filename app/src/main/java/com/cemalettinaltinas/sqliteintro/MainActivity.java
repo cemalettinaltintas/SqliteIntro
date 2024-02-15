@@ -19,7 +19,12 @@ public class MainActivity extends AppCompatActivity {
             //database.execSQL("INSERT INTO Students(name,age) VALUES('Serra',17)");
             //database.execSQL("INSERT INTO Students(name,age) VALUES('Tuğba',18)");
 
-            Cursor cursor=database.rawQuery("SELECT * FROM Students WHERE age=17",null);
+            //database.execSQL("UPDATE Students SET name='Engin' WHERE name='Tuğba'" );
+            //database.execSQL("UPDATE Students SET age=17 WHERE id=2" );
+
+            //database.execSQL("DELETE FROM Students WHERE id=2");
+
+            Cursor cursor=database.rawQuery("SELECT * FROM Students",null);
 
             int idIx=cursor.getColumnIndex("id");
             int nameIx=cursor.getColumnIndex("name");
